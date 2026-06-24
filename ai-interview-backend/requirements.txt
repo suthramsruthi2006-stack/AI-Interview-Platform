@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+python-dotenv
+python-jose
+passlib
+bcrypt
+python-multipart
+pydantic
+openai
+pymupdf

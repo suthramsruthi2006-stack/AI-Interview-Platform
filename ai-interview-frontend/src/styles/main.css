@@ -1,0 +1,110 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Header */
+header {
+  background-color: #2563eb;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Login Form */
+.login-container {
+  width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #1d4ed8;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 20px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Interview Chat */
+.chat-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.question-box {
+  background: #dbeafe;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.answer-box {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}

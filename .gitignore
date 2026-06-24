@@ -1,0 +1,8 @@
+.env
+*.db
+__pycache__/
+*.pyc
+uploads/
+interview_report.pdf
+node_modules/
+dist/
