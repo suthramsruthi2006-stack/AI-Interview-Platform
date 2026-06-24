@@ -8,7 +8,7 @@ function ReportCard() {
   const getReports = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/interview/reports"
+        "https://ai-interview-backend-oxvw.onrender.com/interview/reports"
       );
 
       console.log("API Response:", response.data);
@@ -95,7 +95,7 @@ function ReportCard() {
         <button
           onClick={() =>
             window.open(
-              "http://127.0.0.1:8000/report/download",
+              "https://ai-interview-backend-oxvw.onrender.com/report/download",
               "_blank"
             )
           }

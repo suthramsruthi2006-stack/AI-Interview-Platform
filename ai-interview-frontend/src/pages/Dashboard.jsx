@@ -33,7 +33,7 @@ function Dashboard() {
   const fetchDashboardData = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/reports/stats"
+        "https://ai-interview-backend-oxvw.onrender.com/reports/stats"
       );
 
       setStats(response.data);

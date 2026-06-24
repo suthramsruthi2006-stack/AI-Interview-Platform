@@ -12,7 +12,7 @@ function RegisterForm() {
   const handleRegister = async () => {
     try {
       await axios.post(
-        "http://127.0.0.1:8000/auth/register",
+        "https://ai-interview-backend-oxvw.onrender.com/auth/register",
         {
           name,
           email,

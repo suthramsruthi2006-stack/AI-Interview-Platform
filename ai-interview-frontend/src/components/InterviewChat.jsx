@@ -19,7 +19,7 @@ function InterviewChat() {
       setQuestionLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/interview/start",
+        "https://ai-interview-backend-oxvw.onrender.com/interview/start",
         {
           role: selectedRole,
           difficulty: difficulty,
@@ -82,7 +82,7 @@ function InterviewChat() {
       setEvaluationLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/interview/evaluate",
+        "https://ai-interview-backend-oxvw.onrender.com/interview/evaluate",
         {
           role: selectedRole,
           questions,
@@ -92,7 +92,7 @@ function InterviewChat() {
 
       try {
         await axios.post(
-          "http://127.0.0.1:8000/reports/save",
+          "https://ai-interview-backend-oxvw.onrender.com/reports/save",
           {
             candidate_id: 1,
             role: selectedRole,

@@ -22,7 +22,7 @@ function ResumeUpload() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/resume/upload",
+        "https://ai-interview-backend-oxvw.onrender.com/resume/upload",
         formData,
         {
           headers: {
