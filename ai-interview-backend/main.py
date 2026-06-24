@@ -13,21 +13,16 @@ from routers import (
 
 from routers.report_pdf import router as report_pdf_router
 
-app = FastAPI()
+# Create FastAPI App
+app = FastAPI(
+    title="AI Interview Platform API"
+)
 
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:5174",
-
-        # Vercel Frontend
-        "https://ai-interview-platform-lac-beta.vercel.app",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],  # Temporary fix for testing
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -36,7 +31,7 @@ app.add_middleware(
 import models
 Base.metadata.create_all(bind=engine)
 
-# Routers
+# Include Routers
 app.include_router(auth.router)
 app.include_router(resumes.router)
 app.include_router(jobroles.router)
@@ -44,14 +39,14 @@ app.include_router(interviews.router)
 app.include_router(reports.router)
 app.include_router(report_pdf_router)
 
-
+# Home Route
 @app.get("/")
 def home():
     return {
         "message": "AI Interview Platform"
     }
 
-
+# Health Check Route
 @app.get("/health")
 def health():
     return {
