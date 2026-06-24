@@ -10,8 +10,16 @@ function RegisterForm() {
   const [password, setPassword] = useState("");
 
   const handleRegister = async () => {
+    console.log("Register button clicked");
+
+    console.log("Sending Data:", {
+      name,
+      email,
+      password,
+    });
+
     try {
-      await axios.post(
+      const response = await axios.post(
         "https://ai-interview-backend-oxvw.onrender.com/auth/register",
         {
           name,
@@ -20,15 +28,24 @@ function RegisterForm() {
         }
       );
 
+      console.log("Success Response:", response.data);
+
       alert("Registration Successful");
       navigate("/login");
     } catch (error) {
-      console.error(error);
+      console.error("Register Error:", error);
 
       if (error.response) {
-        alert(error.response.data.detail);
+        console.log("Status:", error.response.status);
+        console.log("Response:", error.response.data);
+
+        alert(
+          error.response.data.detail ||
+          JSON.stringify(error.response.data)
+        );
       } else {
-        alert("Registration Failed");
+        console.log("Message:", error.message);
+        alert(error.message);
       }
     }
   };
@@ -131,9 +148,7 @@ function RegisterForm() {
           }}
         >
           Already have an account?{" "}
-          <Link to="/login">
-            Login
-          </Link>
+          <Link to="/login">Login</Link>
         </div>
       </div>
     </div>
